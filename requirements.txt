@@ -1,0 +1,3 @@
+pytest
+page_objects
+webdriver-manager
