@@ -2,6 +2,7 @@ import pytest
 
 from pages.main_page import MainPage
 from test_helpers.config import Config
+from test_helpers.constants import TASK_NAME
 from test_helpers.driver_factory import DriverFactory
 
 
@@ -23,3 +24,8 @@ def main_page(browser, conf):
 def conf():
     config = Config()
     return config
+
+
+@pytest.fixture
+def add_task(main_page):
+    main_page.add_task(TASK_NAME)
